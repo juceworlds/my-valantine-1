@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Will You Be My Valentine?</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Page 1: Proposal -->
+    <div id="page1" class="page active">
+        <div class="container">
+            <header>
+                <h1 class="valentine-title">Valentine's Day</h1>
+                <div class="heart-pulse"><i class="fas fa-heart"></i></div>
+            </header>
+            
+            <main class="proposal-container">
+                <div class="envelope">
+                    <div class="envelope-flap"></div>
+                    <div class="envelope-body">
+                        <div class="letter">
+                            <h2 class="question">Will you be my Valentine?</h2>
+                            <p class="message">Every love story is beautiful, but ours is my favorite. I would be honored if you would be my Valentine this year and make this day extra special.</p>
+                            <div class="signature">With love ❤️</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div id="buttonsContainer" class="buttons-container">
+                    <button id="yesBtn" class="btn yes-btn">
+                        <i class="fas fa-heart"></i> Yes, Absolutely!
+                    </button>
+                    <button id="noBtn" class="btn no-btn">
+                        <i class="fas fa-times"></i> No
+                    </button>
+                </div>
+                
+                <div class="hint">
+                    <p><i class="fas fa-lightbulb"></i> The "No" button will move to a random position each time you click it!</p>
+                </div>
+            </main>
+            
+            <footer class="page-footer">
+                <p>Made with <i class="fas fa-heart"></i> for you</p>
+            </footer>
+        </div>
+    </div>
+    
+    <!-- Page 2: Celebration -->
+    <div id="page2" class="page">
+        <div class="container">
+            <header>
+                <h1 class="celebration-title">You Said Yes!</h1>
+                <div class="heart-pulse celebration-heart"><i class="fas fa-heart"></i></div>
+            </header>
+            
+            <main class="celebration-container">
+                <div class="success-animation">
+                    <div class="fireworks">
+                        <div class="firework"></div>
+                        <div class="firework"></div>
+                        <div class="firework"></div>
+                        <div class="firework"></div>
+                    </div>
+                    <div class="success-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                </div>
+                
+                <div class="celebration-message">
+                    <h2>Hooray! You've made me the happiest person!</h2>
+                    <p>This Valentine's Day will be unforgettable because I get to spend it with you. Get ready for a day filled with love, laughter, and wonderful surprises!</p>
+                    
+                    <div class="celebration-details">
+                        <div class="detail-card">
+                            <i class="fas fa-calendar-alt"></i>
+                            <h3>February 14th</h3>
+                            <p>Our special day</p>
+                        </div>
+                        <div class="detail-card">
+                            <i class="fas fa-star"></i>
+                            <h3>Memorable</h3>
+                            <p>A day to remember</p>
+                        </div>
+                        <div class="detail-card">
+                            <i class="fas fa-gift"></i>
+                            <h3>Surprises</h3>
+                            <p>Something special awaits</p>
+                        </div>
+                    </div>
+                    
+                    <div class="countdown">
+                        <h3>Counting down to our Valentine's Day:</h3>
+                        <div class="countdown-timer">
+                            <div class="countdown-unit">
+                                <span id="days">0</span>
+                                <small>Days</small>
+                            </div>
+                            <div class="countdown-unit">
+                                <span id="hours">0</span>
+                                <small>Hours</small>
+                            </div>
+                            <div class="countdown-unit">
+                                <span id="minutes">0</span>
+                                <small>Minutes</small>
+                            </div>
+                            <div class="countdown-unit">
+                                <span id="seconds">0</span>
+                                <small>Seconds</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="action-buttons">
+                    <button id="backBtn" class="btn back-btn">
+                        <i class="fas fa-arrow-left"></i> Back to Question
+                    </button>
+                    <button id="shareBtn" class="btn share-btn">
+                        <i class="fas fa-share-alt"></i> Share the News
+                    </button>
+                </div>
+            </main>
+            
+            <footer class="page-footer">
+                <p>Made with <i class="fas fa-heart"></i> for the most special person</p>
+            </footer>
+        </div>
+    </div>
+    
+    <!-- Confetti canvas -->
+    <canvas id="confetti-canvas"></canvas>
+    
+    <script src="script.js"></script>
+</body>
+</html>

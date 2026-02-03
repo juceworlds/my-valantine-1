@@ -1,0 +1,479 @@
+    /* Reset and Base Styles */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: 'Poppins', sans-serif;
+        background: linear-gradient(135deg, #ffafbd, #ffc3a0);
+        color: #5a3d5c;
+        min-height: 100vh;
+        overflow-x: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .container {
+        max-width: 500px;
+        width: 100%;
+        padding: 20px;
+        margin: 0 auto;
+    }
+
+    /* Page transitions */
+    .page {
+        display: none;
+        opacity: 0;
+        transition: opacity 0.5s ease;
+    }
+
+    .page.active {
+        display: block;
+        opacity: 1;
+    }
+
+    /* Header Styles */
+    header {
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    .valentine-title, .celebration-title {
+        font-family: 'Dancing Script', cursive;
+        font-size: 2.8rem;
+        color: #d32f75;
+        margin-bottom: 10px;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .heart-pulse {
+        font-size: 2.5rem;
+        color: #ff4081;
+        animation: pulse 1.5s infinite;
+    }
+
+    .celebration-heart {
+        font-size: 3rem;
+        color: #ff1744;
+    }
+
+    @keyframes pulse {
+        0% { transform: scale(1); }
+        50% { transform: scale(1.1); }
+        100% { transform: scale(1); }
+    }
+
+    /* Envelope and Letter */
+    .proposal-container {
+        background-color: rgba(255, 255, 255, 0.9);
+        border-radius: 20px;
+        padding: 25px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+        margin-bottom: 25px;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .envelope {
+        position: relative;
+        margin: 0 auto 30px;
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .envelope-body {
+        background: #ff6b8b;
+        border-radius: 0 0 10px 10px;
+        padding: 20px;
+        position: relative;
+        z-index: 1;
+    }
+
+    .envelope-flap {
+        width: 0;
+        height: 0;
+        border-left: 150px solid transparent;
+        border-right: 150px solid transparent;
+        border-bottom: 80px solid #ff4d6d;
+        border-top: 0;
+        position: relative;
+        z-index: 2;
+        margin: 0 auto;
+    }
+
+    .letter {
+        background: white;
+        border-radius: 10px;
+        padding: 25px 20px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        margin-top: -60px;
+        position: relative;
+        z-index: 3;
+    }
+
+    .question {
+        font-family: 'Dancing Script', cursive;
+        font-size: 2.2rem;
+        color: #d32f75;
+        text-align: center;
+        margin-top: 20px;
+        margin-bottom: 15px;
+    }
+
+    .message {
+        font-size: 1.1rem;
+        line-height: 1.6;
+        text-align: center;
+        margin-bottom: 15px;
+        color: #555;
+    }
+
+    .signature {
+        text-align: right;
+        font-family: 'Dancing Script', cursive;
+        font-size: 1.8rem;
+        color: #ff4081;
+    }
+
+    /* Buttons Container */
+    .buttons-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 30px;
+        position: relative;
+        min-height: 220px;
+        width: 100%;
+        border: 2px dashed rgba(255, 107, 139, 0.3);
+        border-radius: 15px;
+        background-color: rgba(255, 255, 255, 0.5);
+    }
+
+    /* Buttons */
+    .btn {
+    border: none;
+    border-radius: 50px;
+        padding: 16px 24px;
+        font-size: 1.2rem;
+        font-weight: 600;
+        cursor: pointer;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        position:sticky;
+    }
+
+    .yes-btn {
+        background: linear-gradient(to right, #ff4081, #ff79a6);
+        color: white;
+        top: 50%;
+        left: 30%;
+        transform: translate(-50%, -50%);
+        min-width: 200px;
+    }
+
+    .yes-btn:hover {
+        background: linear-gradient(to right, #f50057, #ff4081);
+        transform: translate(-50%, -50%) scale(1.05);
+    }
+
+    .no-btn {
+        background: linear-gradient(to right, #6a89cc, #4a69bd);
+        color: white;
+        color: white;
+        top: 50%;
+        left: 100%;
+        transform: translate(-50%, -50%);
+        min-width: 200px;
+        transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        min-width: 140px;
+    }
+
+    .no-btn:hover {
+        background: linear-gradient(to right, #5a79bc, #3a59ad);
+    }
+
+    /* Hint */
+    .hint {
+        background-color: rgba(255, 255, 255, 0.7);
+        border-radius: 10px;
+        padding: 12px;
+        margin-top: 20px;
+        text-align: center;
+        font-size: 0.9rem;
+        color: #666;
+    }
+
+    .hint i {
+        color: #ffc107;
+        margin-right: 5px;
+    }
+
+    /* Celebration Page */
+    .celebration-container {
+        background-color: rgba(255, 255, 255, 0.9);
+        border-radius: 20px;
+        padding: 25px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+        margin-bottom: 25px;
+    }
+
+    .success-animation {
+        position: relative;
+        height: 200px;
+        margin-bottom: 30px;
+    }
+
+    .success-icon {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: linear-gradient(135deg, #ff4081, #ff79a6);
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 4rem;
+        color: white;
+        z-index: 2;
+        animation: bounce 1s infinite alternate;
+    }
+
+    @keyframes bounce {
+        from { transform: translate(-50%, -50%) scale(1); }
+        to { transform: translate(-50%, -50%) scale(1.1); }
+    }
+
+    .fireworks {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+    }
+
+    .firework {
+        position: absolute;
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background-color: #ff4081;
+        animation: firework 1.5s infinite;
+    }
+
+    .firework:nth-child(1) {
+        top: 20%;
+        left: 20%;
+        animation-delay: 0s;
+    }
+
+    .firework:nth-child(2) {
+        top: 30%;
+        left: 80%;
+        animation-delay: 0.3s;
+        background-color: #ffc107;
+    }
+
+    .firework:nth-child(3) {
+        top: 70%;
+        left: 40%;
+        animation-delay: 0.6s;
+        background-color: #4caf50;
+    }
+
+    .firework:nth-child(4) {
+        top: 80%;
+        left: 70%;
+        animation-delay: 0.9s;
+        background-color: #2196f3;
+    }
+
+    @keyframes firework {
+        0% { transform: translateY(0) scale(1); opacity: 1; }
+        100% { transform: translateY(-100px) scale(0); opacity: 0; }
+    }
+
+    .celebration-message h2 {
+        color: #d32f75;
+        font-size: 1.8rem;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .celebration-message p {
+        font-size: 1.1rem;
+        line-height: 1.6;
+        text-align: center;
+        margin-bottom: 30px;
+        color: #555;
+    }
+
+    .celebration-details {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 15px;
+        margin-bottom: 30px;
+    }
+
+    .detail-card {
+        flex: 1;
+        min-width: 120px;
+        background: white;
+        border-radius: 10px;
+        padding: 15px;
+        text-align: center;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .detail-card i {
+        font-size: 2rem;
+        color: #ff4081;
+        margin-bottom: 10px;
+    }
+
+    .detail-card h3 {
+        font-size: 1.2rem;
+        margin-bottom: 5px;
+        color: #d32f75;
+    }
+
+    .detail-card p {
+        font-size: 0.9rem;
+        color: #777;
+    }
+
+    /* Countdown */
+    .countdown {
+        background: linear-gradient(135deg, #ffafbd, #ffc3a0);
+        border-radius: 15px;
+        padding: 20px;
+        margin-bottom: 30px;
+    }
+
+    .countdown h3 {
+        text-align: center;
+        color: #5a3d5c;
+        margin-bottom: 15px;
+        font-size: 1.3rem;
+    }
+
+    .countdown-timer {
+        display: flex;
+        justify-content: space-around;
+        text-align: center;
+    }
+
+    .countdown-unit {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .countdown-unit span {
+        font-size: 2.2rem;
+        font-weight: 700;
+        color: #d32f75;
+        line-height: 1;
+    }
+
+    .countdown-unit small {
+        font-size: 0.9rem;
+        color: #5a3d5c;
+        margin-top: 5px;
+    }
+
+    /* Action Buttons */
+    .action-buttons {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+        flex-wrap: wrap;
+    }
+
+    .back-btn {
+        background: linear-gradient(to right, #6a89cc, #4a69bd);
+        color: white;
+        position: static;
+        transform: none;
+    }
+
+    .share-btn {
+        background: linear-gradient(to right, #4caf50, #8bc34a);
+        color: white;
+        position: static;
+        transform: none;
+    }
+
+    .back-btn:hover, .share-btn:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+    }
+
+    /* Footer */
+    .page-footer {
+        text-align: center;
+        color: rgba(255, 255, 255, 0.8);
+        font-size: 0.9rem;
+        margin-top: 20px;
+    }
+
+    .page-footer i {
+        color: #ff4081;
+        margin: 0 5px;
+    }
+
+    /* Confetti Canvas */
+    #confetti-canvas {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+        z-index: 1000;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 480px) {
+        .container {
+            padding: 15px;
+        }
+        
+        .valentine-title, .celebration-title {
+            font-size: 2.2rem;
+        }
+        
+        .question {
+            font-size: 1.8rem;
+        }
+        
+        .btn {
+            padding: 14px 22px;
+            font-size: 1.1rem;
+        }
+        
+        .buttons-container {
+            min-height: 250px;
+        }
+        
+        .yes-btn {
+            min-width: 180px;
+        }
+        
+        .no-btn {
+            min-width: 120px;
+        }
+        
+        .celebration-details {
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .detail-card {
+            width: 100%;
+            max-width: 200px;
+        }
+    }
